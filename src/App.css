@@ -55,3 +55,18 @@
 .field {
   margin-bottom: 2rem;
 }
+
+.upper {
+  z-index: 20000 !important;
+}
+
+.little-right-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.little-right-button {
+  margin-left: 1.5rem;
+  margin-right: -0.5rem;
+}
