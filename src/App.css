@@ -1,38 +1,72 @@
+@import "../node_modules/nes.css/css/nes.css";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 .App {
-  text-align: center;
+  font-family: "Press Start 2P", cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body-container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-title {
+  margin-bottom: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
-.App-link {
-  color: #61dafb;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  margin-bottom: 2rem !important;
+  width: 50%;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.card-list {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.red-button {
+  background-color: #d50000 !important;
+}
+
+.li-left-padding {
+  padding-left: 0.25rem !important;
+}
+
+.form {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.field {
+  margin-bottom: 2rem;
+}
+
+.upper {
+  z-index: 20000 !important;
+}
+
+.little-right-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.little-right-button {
+  margin-left: 1.5rem;
+  margin-right: -0.5rem;
 }

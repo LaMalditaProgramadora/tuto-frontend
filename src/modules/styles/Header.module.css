@@ -1,0 +1,46 @@
+.header {
+  background-color: #d50000;
+  color: white;
+}
+
+.container {
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
+}
+
+.nav_brand {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.5rem;
+  padding-bottom: 0rem;
+  justify-content: space-between;
+}
+
+.pixelart {
+  image-rendering: pixelated;
+  margin-right: 1rem;
+  margin-top: -0.75rem;
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.option {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: white;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1rem;
+}
