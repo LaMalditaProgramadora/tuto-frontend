@@ -1,7 +1,8 @@
-import { NavLink } from "react-router-dom";
-import styles from "../styles/Header.module.css";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styles from '../styles/Header.module.css';
 
-const Header = () => {
+function Header(): React.ReactElement {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -11,36 +12,36 @@ const Header = () => {
               className={`nes-avatar is-medium ${styles.pixelart}`}
               alt=""
               src="/assets/upc.png"
-            ></img>
+            />
             <h1>Tuto</h1>
           </div>
           <div className={styles.options}>
             <NavLink to="course/list">
-              <label className={styles.option}>Cursos</label>
+              <span className={styles.option}>Cursos</span>
             </NavLink>
             <NavLink to="teacher/list">
-              <label className={styles.option}>Profesores</label>
+              <span className={styles.option}>Profesores</span>
             </NavLink>
             <NavLink to="section/list">
-              <label className={styles.option}>Secciones</label>
+              <span className={styles.option}>Secciones</span>
             </NavLink>
             <NavLink to="tutor/list">
-              <label className={styles.option}>Tutores</label>
+              <span className={styles.option}>Tutores</span>
             </NavLink>
             <NavLink to="student/list">
-              <label className={styles.option}>Estudiantes</label>
+              <span className={styles.option}>Estudiantes</span>
             </NavLink>
             <NavLink to="topic/list">
-              <label className={styles.option}>Temas</label>
+              <span className={styles.option}>Temas</span>
             </NavLink>
             <NavLink to="tutorship/list">
-              <label className={styles.option}>Tutorías</label>
+              <span className={styles.option}>Tutorías</span>
             </NavLink>
           </div>
         </div>
       </div>
     </header>
   );
-};
+}
 
 export default Header;

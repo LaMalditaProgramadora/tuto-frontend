@@ -1,6 +1,6 @@
-import { Teacher } from "./Teacher";
-import { Course } from "./Course";
-import { Student } from "./Student";
+import { Teacher } from './Teacher';
+import { Course } from './Course';
+import { Student } from './Student';
 
 export interface Section {
   idSection: number;

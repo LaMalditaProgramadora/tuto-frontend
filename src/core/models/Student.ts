@@ -1,5 +1,5 @@
-import { Section } from "./Section";
-import { Tutorship } from "./Tutorship";
+import { Section } from './Section';
+import { Tutorship } from './Tutorship';
 
 export interface Student {
   idStudent: number;

@@ -1,7 +1,7 @@
-import {Tutorship} from "./Tutorship";
+import { Tutorship } from './Tutorship';
 
 export interface Topic {
-    idTopic: number;
-    description: string;
-    tutorships: Tutorship[];
+  idTopic: number;
+  description: string;
+  tutorships: Tutorship[];
 }

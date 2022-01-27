@@ -1,12 +1,12 @@
-import React from "react";
-import Header from "./modules/components/Header";
-import CourseSave from "./modules/pages/courses/CourseSave";
-import { Routes, Route } from "react-router-dom";
-import CourseList from "./modules/pages/courses/CourseList";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './modules/components/Header';
+import CourseSave from './modules/pages/courses/CourseSave';
+import CourseList from './modules/pages/courses/CourseList';
 
-import "./App.css";
+import './App.css';
 
-function App() {
+function App(): React.ReactElement {
   return (
     <div className="App">
       <Header />

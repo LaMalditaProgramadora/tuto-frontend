@@ -1,4 +1,4 @@
-import { Section } from "./Section";
+import { Section } from './Section';
 
 export interface Course {
   idCourse: number;

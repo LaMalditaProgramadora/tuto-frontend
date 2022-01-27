@@ -1,9 +1,9 @@
-import { Course } from "../models/Course";
-import httpClient from "../utils/httpClient";
+import { Course } from '../models/Course';
+import httpClient from '../utils/httpClient';
 
 export async function listCourses(): Promise<Course[]> {
   const data = await httpClient
-    .get<Course[]>("/course/list")
+    .get<Course[]>('/course/list')
     .then((v) => v.data);
   return data;
 }
@@ -16,13 +16,11 @@ export async function listCourseById(courseId: number): Promise<Course> {
 }
 
 export async function saveCourse(course: Course): Promise<void> {
-  const data = await httpClient.post("/course/save", course);
+  const data = await httpClient.post('/course/save', course);
   console.log(data);
-  return;
 }
 
 export async function deleteCourse(courseId: number): Promise<void> {
   const data = await httpClient.delete(`/course/delete?idCourse=${courseId}`);
   console.log(data);
-  return;
 }
