@@ -1,35 +1,28 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "../../App.css";
-import { Course } from "../../_model/Course";
-import CourseService from "../../_service/CourseService";
+import React, { Fragment, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Course } from '../../../core/models/Course';
+import { listCourses } from '../../../core/services/courseService';
 
-const CourseList = () => {
-  const coursesInit: Course[] = [];
-  const [courses, setCourses] = useState(coursesInit);
-  const courseService = new CourseService();
+function CourseList(): React.ReactElement {
+  const [courses, setCourses] = useState<Course[]>([]);
 
-  const list = () => {
-    courseService.list().then((results) => {
-      setCourses(results.data);
-    });
-  };
-
-  const deleteById = () => {
-    courseService.deleteById().then((results) => {
-      setCourses(results.data);
-    });
-  };
+  // const deleteById = () => {
+  //   courseService.deleteById().then((results) => {
+  //     setCourses(results.data);
+  //   });
+  // };
 
   useEffect(() => {
-    list();
+    listCourses().then((results) => {
+      setCourses(results);
+    });
   }, []);
 
   return (
     <>
       <div className="page-title">
         <h2>Cursos</h2>
-        <Link to={"/course/save/0"}>
+        <Link to="/course/save/0">
           <button type="button" className="nes-btn is-error red-button">
             + Agregar
           </button>
@@ -37,6 +30,7 @@ const CourseList = () => {
       </div>
       <div className="cards">
         {courses.map((course, indexRow) => (
+          // eslint-disable-next-line react/no-array-index-key
           <div className="card" key={indexRow}>
             <div className="nes-container with-title is-rounded">
               <p className="title">{course.code}</p>
@@ -46,7 +40,7 @@ const CourseList = () => {
                 </li>
               </ul>
               <div className="little-right-buttons">
-                <div className="row"></div>
+                <div className="row" />
                 <div className="row">
                   <button
                     type="button"
@@ -68,6 +62,6 @@ const CourseList = () => {
       </div>
     </>
   );
-};
+}
 
 export default CourseList;

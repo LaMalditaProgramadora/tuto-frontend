@@ -14,12 +14,12 @@
     transition: all 0.35s ease-in;
   }
 
-  .loading-image-div {
+  .loading_image_div {
       display: flex;
       justify-content: center;
   }
 
-  .loading-image {
+  .loading_image {
     width: 5rem;
     height: 5rem;
     position: fixed;
