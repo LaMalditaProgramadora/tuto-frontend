@@ -7,8 +7,7 @@ interface LoadingProps {
 
 function Loading({ hidden }: LoadingProps): React.ReactElement {
   return (
-    <>
-      <div className={`${styles.modal} ${styles.upper}`} hidden={hidden} />
+    <div className={`${styles.modal} ${styles.upper}`} hidden={hidden}>
       <div
         className={`${styles.loading_image_div} ${styles.upper}`}
         hidden={hidden}
@@ -19,7 +18,7 @@ function Loading({ hidden }: LoadingProps): React.ReactElement {
           src="/assets/loading.gif"
         />
       </div>
-    </>
+    </div>
   );
 }
 

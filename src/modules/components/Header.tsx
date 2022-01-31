@@ -24,46 +24,25 @@ function Header(): React.ReactElement {
             </div>
           </div>
           <div className={classNames(styles.options, menu && styles.active)}>
-            <NavLink
-              to="course/list"
-              className={({ isActive }) => styles.option}
-            >
+            <NavLink to="course" className={({ isActive }) => styles.option}>
               Cursos
             </NavLink>
-            <NavLink
-              to="teacher/list"
-              className={({ isActive }) => styles.option}
-            >
+            <NavLink to="teacher" className={({ isActive }) => styles.option}>
               Profesores
             </NavLink>
-            <NavLink
-              to="section/list"
-              className={({ isActive }) => styles.option}
-            >
+            <NavLink to="section" className={({ isActive }) => styles.option}>
               Secciones
             </NavLink>
-            <NavLink
-              to="tutor/list"
-              className={({ isActive }) => styles.option}
-            >
+            <NavLink to="tutor" className={({ isActive }) => styles.option}>
               Tutores
             </NavLink>
-            <NavLink
-              to="student/list"
-              className={({ isActive }) => styles.option}
-            >
+            <NavLink to="student" className={({ isActive }) => styles.option}>
               Estudiantes
             </NavLink>
-            <NavLink
-              to="topic/list"
-              className={({ isActive }) => styles.option}
-            >
+            <NavLink to="topic" className={({ isActive }) => styles.option}>
               Temas
             </NavLink>
-            <NavLink
-              to="tutorship/list"
-              className={({ isActive }) => styles.option}
-            >
+            <NavLink to="tutorship" className={({ isActive }) => styles.option}>
               Tutorías
             </NavLink>
           </div>
