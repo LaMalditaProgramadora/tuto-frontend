@@ -8,16 +8,7 @@ interface LoadingProps {
 function Loading({ hidden }: LoadingProps): React.ReactElement {
   return (
     <div className={`${styles.modal} ${styles.upper}`} hidden={hidden}>
-      <div
-        className={`${styles.loading_image_div} ${styles.upper}`}
-        hidden={hidden}
-      >
-        <img
-          className={styles.loading_image}
-          alt=""
-          src="/assets/loading.gif"
-        />
-      </div>
+      <img className={styles.loading_image} alt="" src="/assets/loading.gif" />
     </div>
   );
 }

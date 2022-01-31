@@ -63,8 +63,8 @@ function CourseSave(): React.ReactElement {
           ! Guardar
         </button>
       </div>
-      <div className="form">
-        <div className="nes-field field">
+      <div className={styles.form}>
+        <div className={classNames('nes-field', styles.field)}>
           <label htmlFor="code_field">
             Código
             <input
@@ -78,7 +78,7 @@ function CourseSave(): React.ReactElement {
             />
           </label>
         </div>
-        <div className="nes-field field">
+        <div className={classNames('nes-field', styles.field)}>
           <label htmlFor="name_field">
             Nombre
             <input

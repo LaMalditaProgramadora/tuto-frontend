@@ -14,11 +14,6 @@
   z-index: 9999;
 }
 
-.loading_image_div {
-  display: flex;
-  justify-content: center;
-}
-
 .loading_image {
   width: 5rem;
   height: 5rem;
