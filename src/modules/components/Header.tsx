@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import styles from '../styles/Header.module.css';
 import Hamburger from './Hamburger';
 
+import logo from '../../assets/upc.png';
+
 function Header(): React.ReactElement {
   const [menu, setMenu] = useState(false);
 
@@ -19,7 +21,7 @@ function Header(): React.ReactElement {
             </div>
 
             <div className={styles.title_brand}>
-              <img className={styles.pixelart} alt="" src="/assets/upc.png" />
+              <img className={styles.pixelart} alt="" src={logo} />
               <h1 className={styles.title_text}>Tuto</h1>
             </div>
           </div>
