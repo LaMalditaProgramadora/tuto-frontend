@@ -1,11 +1,14 @@
 import React, { ChangeEvent, Fragment, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import classNames from 'classnames';
 import Loading from '../../components/Loading';
 import { Course } from '../../../core/models/Course';
 import {
   listCourseById,
   saveCourse,
 } from '../../../core/services/courseService';
+
+import styles from '../../styles/Courses.module.css';
 
 function CourseSave(): React.ReactElement {
   const courseInit: Course = {
@@ -23,7 +26,6 @@ function CourseSave(): React.ReactElement {
     setHiddenModal(false);
     saveCourse(course).then((result) => {
       setHiddenModal(true);
-      console.log(result);
     });
   };
 
@@ -51,11 +53,11 @@ function CourseSave(): React.ReactElement {
   return (
     <>
       <Loading hidden={hiddenModal} />
-      <div className="page-title">
+      <div className={styles.page_title}>
         <h2>Curso</h2>
         <button
           type="button"
-          className="nes-btn is-error red-button"
+          className={classNames('nes-btn', 'is-error', styles.red_button)}
           onClick={save}
         >
           ! Guardar

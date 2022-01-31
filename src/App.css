@@ -1,72 +1,18 @@
-@import "../node_modules/nes.css/css/nes.css";
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import '../node_modules/nes.css/css/nes.css';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .App {
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .body-container {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding: 0rem 0.5rem;
   margin-top: 2rem;
 }
 
-.page-title {
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.card {
-  margin-bottom: 2rem !important;
-  width: 50%;
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-
-.card-list {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-
-.red-button {
-  background-color: #d50000 !important;
-}
-
-.li-left-padding {
-  padding-left: 0.25rem !important;
-}
-
-.form {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-
-.field {
-  margin-bottom: 2rem;
-}
-
-.upper {
-  z-index: 20000 !important;
-}
-
-.little-right-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.little-right-button {
-  margin-left: 1.5rem;
-  margin-right: -0.5rem;
+@media only screen and (min-width: 1100px) {
+  .body-container {
+    padding: 0rem 2rem;
+    margin-top: 2rem;
+  }
 }

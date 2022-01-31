@@ -1,41 +1,70 @@
-import React from 'react';
+import classNames from 'classnames';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/Header.module.css';
+import Hamburger from './Hamburger';
 
 function Header(): React.ReactElement {
+  const [menu, setMenu] = useState(false);
+
+  const toggle: (state: boolean) => void = (state: boolean) => setMenu(state);
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.nav_brand}>
           <div className={styles.title}>
-            <img
-              className={`nes-avatar is-medium ${styles.pixelart}`}
-              alt=""
-              src="/assets/upc.png"
-            />
-            <h1>Tuto</h1>
+            <div className={styles.title_button}>
+              <Hamburger toggleCallback={toggle} />
+            </div>
+
+            <div className={styles.title_brand}>
+              <img className={styles.pixelart} alt="" src="/assets/upc.png" />
+              <h1 className={styles.title_text}>Tuto</h1>
+            </div>
           </div>
-          <div className={styles.options}>
-            <NavLink to="course/list">
-              <span className={styles.option}>Cursos</span>
+          <div className={classNames(styles.options, menu && styles.active)}>
+            <NavLink
+              to="course/list"
+              className={({ isActive }) => styles.option}
+            >
+              Cursos
             </NavLink>
-            <NavLink to="teacher/list">
-              <span className={styles.option}>Profesores</span>
+            <NavLink
+              to="teacher/list"
+              className={({ isActive }) => styles.option}
+            >
+              Profesores
             </NavLink>
-            <NavLink to="section/list">
-              <span className={styles.option}>Secciones</span>
+            <NavLink
+              to="section/list"
+              className={({ isActive }) => styles.option}
+            >
+              Secciones
             </NavLink>
-            <NavLink to="tutor/list">
-              <span className={styles.option}>Tutores</span>
+            <NavLink
+              to="tutor/list"
+              className={({ isActive }) => styles.option}
+            >
+              Tutores
             </NavLink>
-            <NavLink to="student/list">
-              <span className={styles.option}>Estudiantes</span>
+            <NavLink
+              to="student/list"
+              className={({ isActive }) => styles.option}
+            >
+              Estudiantes
             </NavLink>
-            <NavLink to="topic/list">
-              <span className={styles.option}>Temas</span>
+            <NavLink
+              to="topic/list"
+              className={({ isActive }) => styles.option}
+            >
+              Temas
             </NavLink>
-            <NavLink to="tutorship/list">
-              <span className={styles.option}>Tutorías</span>
+            <NavLink
+              to="tutorship/list"
+              className={({ isActive }) => styles.option}
+            >
+              Tutorías
             </NavLink>
           </div>
         </div>
